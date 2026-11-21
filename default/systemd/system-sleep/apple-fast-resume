@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# On the MacBook Pro (Mid 2015), deep sleep resume brings the non-boot CPUs
+# On the MacBookPro11,4 and 12,1, deep sleep resume brings the non-boot CPUs
 # back one at a time, and each can take seconds. The screen stays black for
 # 10+ seconds after the lid opens. With those CPUs offline before sleep, the
 # kernel has none to bring back, and bringing them online again after resume

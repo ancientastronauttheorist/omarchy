@@ -1,8 +1,9 @@
-# The MacBook Pro (Mid 2015) takes seconds per CPU to bring its non-boot CPUs
-# back when resuming from deep sleep, so the screen stays black long after the
-# lid opens. A sleep hook takes those CPUs offline before sleep and brings them
-# back once the system is running again.
-if omarchy-hw-match "MacBookPro11,4"; then
+# The MacBookPro11,4 (15-inch, Mid 2015) and MacBookPro12,1 (13-inch, Early
+# 2015) take seconds per CPU to bring their non-boot CPUs back when resuming
+# from deep sleep, so the screen stays black long after the lid opens. A sleep
+# hook takes those CPUs offline before sleep and brings them back once the
+# system is running again.
+if omarchy-hw-match "MacBookPro11,4" || omarchy-hw-match "MacBookPro12,1"; then
   sleep_hook_dir="${OMARCHY_SYSTEM_SLEEP_DIR:-/usr/lib/systemd/system-sleep}"
 
   sudo mkdir -p "$sleep_hook_dir"

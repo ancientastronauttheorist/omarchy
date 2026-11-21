@@ -1,7 +1,7 @@
-echo "Wake the MacBook Pro (Mid 2015) without a black screen when the lid opens"
+echo "Wake the Mid 2015 15-inch and Early 2015 13-inch MacBook Pro without a black screen when the lid opens"
 
 # See install/hardware/apple/fix-resume-cpus.sh.
-if ! omarchy-hw-match "MacBookPro11,4"; then
+if ! omarchy-hw-match "MacBookPro11,4" && ! omarchy-hw-match "MacBookPro12,1"; then
   exit 0
 fi
 
